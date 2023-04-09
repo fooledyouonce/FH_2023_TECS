@@ -34,6 +34,13 @@ public class ManualActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
 
+    public MyClass(int objectID) {
+        this.objectID = objectID; // Here, we use "this" to refer to the instance variable
+    }
+    public int getObjectID() {
+        return this.objectID; // Here, we use "this" to refer to the instance variable
+    }
+
     EditText etItemName;
     EditText etItemType;
     Button btnCheck;
@@ -96,6 +103,7 @@ public class ManualActivity extends AppCompatActivity {
                     // Store an object
                     userManualForm.put("itemName", etItemName.getText().toString());
                     userManualForm.put("itemType", etItemType.getText().toString());
+                    this.objectID = etItemName.getText().toString()
 
                     // Saving object
                     userManualForm.saveInBackground(new SaveCallback() {
@@ -142,4 +150,3 @@ public class ManualActivity extends AppCompatActivity {
         finish();
     }
 }
-
