@@ -12,5 +12,6 @@
     <string name="welcome">Welcome</string>
     <string name="scan_item">SCAN ITEM</string>
     <string name="input_manually">INPUT MANUALLY</string>
+    <string name="paper">TextView</string>
 
 </resources>
